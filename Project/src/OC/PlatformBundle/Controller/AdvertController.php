@@ -10,14 +10,13 @@ use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
-
+use OC\PlatformBundle\Form\AdvertType;
 
 class AdvertController extends Controller
 {
-  public function addAction(Request $request)
+  public function viewAction(Request $request)
   {
          $advert = new Advert();
          $form   = $this->get('form.factory')->create(AdvertType::class, $advert);

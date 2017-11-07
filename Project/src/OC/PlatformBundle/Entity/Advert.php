@@ -8,6 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use OC\PlatformBundle\Validator\Antiflood;
+
 /**
  * @ORM\Entity(repositoryClass="OC\PlatformBundle\Entity\AdvertRepository")
  * @ORM\HasLifecycleCallbacks()
