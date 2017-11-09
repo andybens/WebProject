@@ -7,36 +7,41 @@ class __TwigTemplate_915056cd4a0f4be95cc08bfe78d1c8c5e074bd34cdc6618a25fc977fa6d
     {
         parent::__construct($env);
 
-        $this->parent = false;
-
+        // line 3
+        $this->parent = $this->loadTemplate("OCPlatformBundle:Advert:layout.html.twig", "OCPlatformBundle:Advert:add.html.twig", 3);
         $this->blocks = array(
             'body' => array($this, 'block_body'),
         );
     }
 
+    protected function doGetParent(array $context)
+    {
+        return "OCPlatformBundle:Advert:layout.html.twig";
+    }
+
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9ea14a4ffa25176f4aa82b29e3b59cc1c45234912447bfbb85245b379321b475 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9ea14a4ffa25176f4aa82b29e3b59cc1c45234912447bfbb85245b379321b475->enter($__internal_9ea14a4ffa25176f4aa82b29e3b59cc1c45234912447bfbb85245b379321b475_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:add.html.twig"));
+        $__internal_0e34a6354305be4fd626974bdf7498f3cb4cbc134400acc6ef00a6743b8ef891 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0e34a6354305be4fd626974bdf7498f3cb4cbc134400acc6ef00a6743b8ef891->enter($__internal_0e34a6354305be4fd626974bdf7498f3cb4cbc134400acc6ef00a6743b8ef891_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "OCPlatformBundle:Advert:add.html.twig"));
 
-        // line 1
-        $this->displayBlock('body', $context, $blocks);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_9ea14a4ffa25176f4aa82b29e3b59cc1c45234912447bfbb85245b379321b475->leave($__internal_9ea14a4ffa25176f4aa82b29e3b59cc1c45234912447bfbb85245b379321b475_prof);
+        $__internal_0e34a6354305be4fd626974bdf7498f3cb4cbc134400acc6ef00a6743b8ef891->leave($__internal_0e34a6354305be4fd626974bdf7498f3cb4cbc134400acc6ef00a6743b8ef891_prof);
 
     }
 
+    // line 5
     public function block_body($context, array $blocks = array())
     {
-        $__internal_3794dac270b53bd9a50f915706bb1307b0c3e249ca75726defa56b9fda0ea217 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3794dac270b53bd9a50f915706bb1307b0c3e249ca75726defa56b9fda0ea217->enter($__internal_3794dac270b53bd9a50f915706bb1307b0c3e249ca75726defa56b9fda0ea217_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7d4d0fae911d1945981b810714c5e013d39bee1d88881113c81eb0620ce2a2ae = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7d4d0fae911d1945981b810714c5e013d39bee1d88881113c81eb0620ce2a2ae->enter($__internal_7d4d0fae911d1945981b810714c5e013d39bee1d88881113c81eb0620ce2a2ae_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 2
+        // line 6
         echo "
   <h2>Ajouter une annonce</h2>
 
   ";
-        // line 5
+        // line 9
         echo twig_include($this->env, $context, "OCPlatformBundle:Advert:form.html.twig");
         echo "
 
@@ -47,7 +52,7 @@ class __TwigTemplate_915056cd4a0f4be95cc08bfe78d1c8c5e074bd34cdc6618a25fc977fa6d
 
 ";
         
-        $__internal_3794dac270b53bd9a50f915706bb1307b0c3e249ca75726defa56b9fda0ea217->leave($__internal_3794dac270b53bd9a50f915706bb1307b0c3e249ca75726defa56b9fda0ea217_prof);
+        $__internal_7d4d0fae911d1945981b810714c5e013d39bee1d88881113c81eb0620ce2a2ae->leave($__internal_7d4d0fae911d1945981b810714c5e013d39bee1d88881113c81eb0620ce2a2ae_prof);
 
     }
 
@@ -56,14 +61,23 @@ class __TwigTemplate_915056cd4a0f4be95cc08bfe78d1c8c5e074bd34cdc6618a25fc977fa6d
         return "OCPlatformBundle:Advert:add.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  40 => 5,  35 => 2,  23 => 1,);
+        return array (  45 => 9,  40 => 6,  34 => 5,  11 => 3,);
     }
 
     public function getSource()
     {
-        return "{% block body %}
+        return "{# src/OC/PlatformBundle/Resources/views/Advert/add.html.twig #}
+
+{% extends \"OCPlatformBundle:Advert:layout.html.twig\" %}
+
+{% block body %}
 
   <h2>Ajouter une annonce</h2>
 
