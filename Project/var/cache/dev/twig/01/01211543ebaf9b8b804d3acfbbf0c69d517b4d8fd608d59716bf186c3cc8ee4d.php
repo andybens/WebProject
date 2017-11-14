@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Profiler/table.html.twig */
+/* WebProfilerBundle:Profiler:table.html.twig */
 class __TwigTemplate_6a697ca5d37711b67fd7891132666455cf64d61d366d353d38627c40ef6848f1 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_6a697ca5d37711b67fd7891132666455cf64d61d366d353d38627c40ef6
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_2bba1ca0485ee89f12716d8b0c1040b5bfa40e7089f4ec4ec1aa90629fe0254f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_2bba1ca0485ee89f12716d8b0c1040b5bfa40e7089f4ec4ec1aa90629fe0254f->enter($__internal_2bba1ca0485ee89f12716d8b0c1040b5bfa40e7089f4ec4ec1aa90629fe0254f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/table.html.twig"));
+        $__internal_6e7602b63853024bb9a302d04f0c9ece5a6f86e2ec0b70c9c0c40ae549a0c987 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6e7602b63853024bb9a302d04f0c9ece5a6f86e2ec0b70c9c0c40ae549a0c987->enter($__internal_6e7602b63853024bb9a302d04f0c9ece5a6f86e2ec0b70c9c0c40ae549a0c987_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:table.html.twig"));
 
         // line 1
         echo "<table class=\"";
@@ -61,13 +61,13 @@ class __TwigTemplate_6a697ca5d37711b67fd7891132666455cf64d61d366d353d38627c40ef6
 </table>
 ";
         
-        $__internal_2bba1ca0485ee89f12716d8b0c1040b5bfa40e7089f4ec4ec1aa90629fe0254f->leave($__internal_2bba1ca0485ee89f12716d8b0c1040b5bfa40e7089f4ec4ec1aa90629fe0254f_prof);
+        $__internal_6e7602b63853024bb9a302d04f0c9ece5a6f86e2ec0b70c9c0c40ae549a0c987->leave($__internal_6e7602b63853024bb9a302d04f0c9ece5a6f86e2ec0b70c9c0c40ae549a0c987_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Profiler/table.html.twig";
+        return "WebProfilerBundle:Profiler:table.html.twig";
     }
 
     public function isTraitable()

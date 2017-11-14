@@ -1,7 +1,6 @@
 <?php
 
 namespace OC\PlatformBundle\Controller;
-
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use OC\PlatformBundle\Entity\Advert;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
@@ -31,9 +30,31 @@ class AdvertController extends Controller
            return $this->redirectToRoute('oc_platform_view', array('id' => $advert->getId()));
          }
 
+
          return $this->render('OCPlatformBundle:Advert:add.html.twig', array(
            'form' => $form->createView(),
          ));
+  }
+
+  public function addAction(Request $request)
+  {
+    $advert = new Advert();
+    $form   = $this->get('form.factory')->create(AdvertType::class, $advert);
+
+    if ($request->isMethod('POST') && $form->handleRequest($request)->isValid()) {
+      $advert->getImage()->upload();
+      $em = $this->getDoctrine()->getManager();
+      $em->persist($advert);
+      $em->flush();
+
+      $request->getSession()->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
+
+      return $this->redirectToRoute('oc_platform_view', array('id' => $advert->getId()));
+    }
+
+    return $this->render('OCPlatformBundle:Advert:add.html.twig', array(
+      'form' => $form->createView(),
+    ));
   }
 
 
@@ -54,6 +75,8 @@ class AdvertController extends Controller
       'listAdverts' => $listAdverts
     ));
   }
+
+
 
   public function indexAction($page)
   {
@@ -87,6 +110,8 @@ class AdvertController extends Controller
     ));
   }
 
+
+
   public function editAction($id, Request $request)
   {
     // ...
@@ -103,4 +128,6 @@ class AdvertController extends Controller
       'advert' => $advert
     ));
   }
+
+
 }

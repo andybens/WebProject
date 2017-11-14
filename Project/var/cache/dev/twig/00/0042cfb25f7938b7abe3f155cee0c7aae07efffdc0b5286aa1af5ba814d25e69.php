@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Profiler/bag.html.twig */
+/* WebProfilerBundle:Profiler:bag.html.twig */
 class __TwigTemplate_eae61593f8ade5daaa4e903e2b45f08ab36618b5e3827f5da46efb14b30099b2 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_eae61593f8ade5daaa4e903e2b45f08ab36618b5e3827f5da46efb14b30
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a8329269713a0a8e295b85af68830f11b7367e6c62c15d3cd0094888f373d213 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a8329269713a0a8e295b85af68830f11b7367e6c62c15d3cd0094888f373d213->enter($__internal_a8329269713a0a8e295b85af68830f11b7367e6c62c15d3cd0094888f373d213_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/bag.html.twig"));
+        $__internal_9070c5c94a7f4ac4df827f13f17a63ebdfee9c5d9097e5215cabb3ac6b19a4e2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9070c5c94a7f4ac4df827f13f17a63ebdfee9c5d9097e5215cabb3ac6b19a4e2->enter($__internal_9070c5c94a7f4ac4df827f13f17a63ebdfee9c5d9097e5215cabb3ac6b19a4e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:bag.html.twig"));
 
         // line 1
         echo "<table class=\"";
@@ -70,13 +70,13 @@ class __TwigTemplate_eae61593f8ade5daaa4e903e2b45f08ab36618b5e3827f5da46efb14b30
 </table>
 ";
         
-        $__internal_a8329269713a0a8e295b85af68830f11b7367e6c62c15d3cd0094888f373d213->leave($__internal_a8329269713a0a8e295b85af68830f11b7367e6c62c15d3cd0094888f373d213_prof);
+        $__internal_9070c5c94a7f4ac4df827f13f17a63ebdfee9c5d9097e5215cabb3ac6b19a4e2->leave($__internal_9070c5c94a7f4ac4df827f13f17a63ebdfee9c5d9097e5215cabb3ac6b19a4e2_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Profiler/bag.html.twig";
+        return "WebProfilerBundle:Profiler:bag.html.twig";
     }
 
     public function isTraitable()

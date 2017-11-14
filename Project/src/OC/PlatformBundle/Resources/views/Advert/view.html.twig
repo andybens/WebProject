@@ -15,6 +15,11 @@
     {{ advert.content }}
   </div>
 
+  <img
+  src="{{ asset(advert.image.webPath) }}"
+  alt="{{ advert.image.alt }}"
+  />
+
   <p>
     <a href="{{ path('oc_platform_home') }}" class="btn btn-default">
       <i class="glyphicon glyphicon-chevron-left"></i>

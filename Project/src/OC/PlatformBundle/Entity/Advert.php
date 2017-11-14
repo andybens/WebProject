@@ -1,6 +1,7 @@
 <?php
 // src/OC/PlatformBundle/Entity/Advert.php
 namespace OC\PlatformBundle\Entity;
+
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -8,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\Context\ExecutionContextInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use OC\PlatformBundle\Validator\Antiflood;
+use OC\PlatformBundle\Entity\Advert;
 
 /**
  * @ORM\Entity(repositoryClass="OC\PlatformBundle\Entity\AdvertRepository")
@@ -62,36 +64,12 @@ class Advert
    * @Assert\Valid()
    */
   private $image;
-  /**
-   * @ORM\ManyToMany(targetEntity="OC\PlatformBundle\Entity\Category", cascade={"persist"})
-   */
-  private $categories;
-  /**
-   * @ORM\OneToMany(targetEntity="OC\PlatformBundle\Entity\Application", mappedBy="advert")
-   */
-  private $applications; // Notez le « s », une annonce est liée à plusieurs candidatures
-  /**
-   * @ORM\Column(name="updated_at", type="datetime", nullable=true)
-   */
-  private $updatedAt;
-  /**
-   * @ORM\Column(name="nb_applications", type="integer")
-   */
-  private $nbApplications = 0;
 
-  public function increaseApplication()
-  {
-    $this->nbApplications++;
-  }
-  public function decreaseApplication()
-  {
-    $this->nbApplications--;
-  }
+
   public function __construct()
   {
     $this->date         = new \Datetime();
     $this->categories   = new ArrayCollection();
-    $this->applications = new ArrayCollection();
   }
   /**
    * Get id
